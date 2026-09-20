@@ -77,7 +77,7 @@ const menuOpen = ref(false)
     <div
       v-if="menuOpen"
       id="mobile-menu"
-      class="md:hidden grid fixed inset-x-3 bottom-23 z-50 rounded-t-xl border border-gray-700 bg-surface p-2 border-b-0"
+      class="md:hidden grid fixed inset-x-3 bottom-23 z-50 rounded-t-xl border border-gray-700 bg-surface p-2 border-b-0 w-95/100 place-self-center"
     >
       <RouterLink
         v-for="item in navItems"
@@ -85,6 +85,7 @@ const menuOpen = ref(false)
         :to="item.path"
         @click="menuOpen = false"
         class="py-5 text-right pr-5"
+        exact-active-class="text-primary-500 font-semibold"
       >
         {{ item.name }}
       </RouterLink>
