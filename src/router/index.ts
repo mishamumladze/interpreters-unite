@@ -11,13 +11,23 @@ const router = createRouter({
     },
     {
       path: '/about',
-      name: 'Tbout',
+      name: 'about',
       component: () => import('../views/AboutView.vue'),
     },
     {
       path: '/tools',
       name: 'Tools',
       component: () => import('../views/ToolsView.vue'),
+    },
+    {
+      path: '/tools/scripts',
+      name: 'scripts',
+      component: () => import('../views/tools/ScriptsView.vue'),
+    },
+    {
+      path: '/tools/discord',
+      name: 'discord',
+      component: () => import('../views/tools/DiscordView.vue'),
     },
   ],
 })
